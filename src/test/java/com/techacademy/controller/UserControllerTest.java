@@ -64,6 +64,9 @@ class UserControllerTest {
         assertEquals("キラメキ太郎", user.getName());
     }
 
+    @Test
+    @DisplayName("一覧画面")
+    @WithMockUser
     void testGetList() throws Exception {
 
            MvcResult result = mockMvc.perform(get("/user/list"))
