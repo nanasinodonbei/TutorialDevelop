@@ -49,6 +49,7 @@ public class User {
     @Column(length = 50)
     @Email
     @Length(max=50)
+    @NotEmpty
     private String email;
     
     @OneToOne(mappedBy="user")
